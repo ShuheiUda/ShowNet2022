@@ -92,7 +92,7 @@ resource "azurerm_vpn_site" "vpn_site_makuhari" {
     }
   }
 }
-
+/*
 resource "azurerm_vpn_site" "vpn_site_gcp_management" {
   name                = "gcp-mgmt"
   resource_group_name = azurerm_resource_group.resource_group_main.name
@@ -116,7 +116,7 @@ resource "azurerm_vpn_site" "vpn_site_gcp_outbound_management" {
     ip_address = google_compute_address.vpn_static_ip_outbound_management.address
   }
 }
-
+*/
 resource "azurerm_vpn_site" "vpn_site_ecl" {
   name                = "ecl"
   resource_group_name = azurerm_resource_group.resource_group_main.name
@@ -145,7 +145,7 @@ resource "azurerm_vpn_gateway_connection" "vpn_gateway_connection_makuhari" {
     shared_key       = var.admin_password
   }
 }
-
+/*
 resource "azurerm_vpn_gateway_connection" "vpn_gateway_connection_gcp_management" {
   name               = "connection-gcp-mgmt"
   vpn_gateway_id     = azurerm_vpn_gateway.vpn_gateway.id
@@ -169,7 +169,7 @@ resource "azurerm_vpn_gateway_connection" "vpn_gateway_connection_gcp_outbound_m
     shared_key       = var.admin_password
   }
 }
-
+*/
 resource "azurerm_vpn_gateway_connection" "vpn_gateway_connection_ecl" {
   name               = "connection-ecl"
   vpn_gateway_id     = azurerm_vpn_gateway.vpn_gateway.id
