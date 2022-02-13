@@ -26,9 +26,9 @@ variable "azure_expressroute_common_parameter" {
 variable "expressroute_circuit_common_parameter" {
   type = map(any)
   default = {
-    "peering_location"  = "tokyo"
+    "peering_location"  = "toronto"
     "bandwidth_in_mbps" = "50"
-    "sku_tier"          = "Standard" #本番は Premium に変更予定
+    "sku_tier"          = "Premium"
     "sku_family"        = "MeteredData"
   }
 }
@@ -40,7 +40,7 @@ resource "azurerm_resource_group" "resource_group_expressroute" {
   location = lookup(var.azure_expressroute_common_parameter, "location")
 }
 
-
+/*
 #https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/express_route_circuit
 resource "azurerm_express_route_circuit" "expressroute_circuit_fic" {
   provider              = azurerm.expressroute
@@ -55,7 +55,7 @@ resource "azurerm_express_route_circuit" "expressroute_circuit_fic" {
     family = lookup(var.expressroute_circuit_common_parameter, "sku_family")
   }
 }
-/*
+
 resource "azurerm_express_route_circuit" "expressroute_circuit_dcconnect" {
   provider              = azurerm.expressroute
   name                  = "dc-connect"
