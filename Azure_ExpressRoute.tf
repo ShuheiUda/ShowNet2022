@@ -11,7 +11,7 @@
 #https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs
 provider "azurerm" {
   alias           = "expressroute"
-  subscription_id = "94dc8792-8993-4a43-b3be-85dee5b13861"
+  subscription_id = "49dde45f-5712-44b2-b0ab-296bde83af6b"
   features {}
 }
 
