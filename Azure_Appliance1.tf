@@ -11,7 +11,7 @@
 #https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs
 provider "azurerm" {
   alias           = "appliance1"
-  subscription_id = "b8ccf12f-a38f-4514-9186-85231780a4af"
+  subscription_id = "49dde45f-5712-44b2-b0ab-296bde83af6b"
   features {}
 }
 
@@ -671,7 +671,7 @@ resource "azurerm_network_interface" "azure_management1_subnet_nic_appliance1" {
   }
 }
 
-<#
+/*
 #https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/linux_virtual_machine
 resource "azurerm_linux_virtual_machine" "azure_management1_subnet_vm_appliance1" {
   name                  = "azure-mgmt-1-vm"
@@ -853,4 +853,4 @@ resource "azurerm_linux_virtual_machine" "azure_global1_subnet_vm_appliance1" {
     version   = "latest"
   }
 }
-#>
+*/

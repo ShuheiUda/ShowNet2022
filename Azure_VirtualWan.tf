@@ -10,7 +10,7 @@
 
 #https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs
 provider "azurerm" {
-  subscription_id = "0e37262f-beeb-4ccc-b35c-cfc8f2b0dcec"
+  subscription_id = "49dde45f-5712-44b2-b0ab-296bde83af6b"
   features {}
 }
 
