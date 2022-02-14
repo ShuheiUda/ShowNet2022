@@ -106,11 +106,3 @@ resource "azurerm_express_route_circuit_authorization" "expressroute_circuit_oci
   express_route_circuit_name = azurerm_express_route_circuit.expressroute_circuit_oci.name
   resource_group_name        = azurerm_resource_group.resource_group_expressroute.name
 }
-
-#https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/express_route_connection
-resource "azurerm_express_route_connection" "expressroute_circuit_oci_connection" {
-  provider                         = azurerm.expressroute
-  name                             = "expressroute_oci_connection"
-  express_route_gateway_id         = azurerm_express_route_gateway.express_route_gateway.id
-  express_route_circuit_peering_id = azurerm_express_route_circuit_peering.example.id
-}
