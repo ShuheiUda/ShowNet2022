@@ -191,10 +191,11 @@ resource "azurerm_express_route_gateway" "express_route_gateway" {
   virtual_hub_id      = azurerm_virtual_hub.virtual_hub.id
   scale_units         = 1
 }
-
+/*
 #https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/express_route_connection
 resource "azurerm_express_route_connection" "expressroute_circuit_oci_connection" {
   name                             = "expressroute_oci_connection"
   express_route_gateway_id         = azurerm_express_route_gateway.express_route_gateway.id
   express_route_circuit_peering_id = azurerm_express_route_circuit.expressroute_circuit_oci.id
 }
+*/
