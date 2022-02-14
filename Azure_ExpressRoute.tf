@@ -108,7 +108,7 @@ resource "azurerm_express_route_circuit_authorization" "expressroute_circuit_oci
 }
 
 resource "azurerm_express_route_circuit_peering" "expressroute_circuit_oci_peering" {
-  peering_type                  = "PrivatePeering"
+  peering_type                  = "AzurePrivatePeering"
   express_route_circuit_name    = azurerm_express_route_circuit.expressroute_circuit_oci.name
   resource_group_name           = azurerm_resource_group.resource_group_expressroute.name
   peer_asn                      = 31898
