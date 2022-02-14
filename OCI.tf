@@ -40,6 +40,8 @@ variable "oracle_vcn_parameter" {
 variable "oracle_virtual_circuit_parameter" {
   type = map(any)
   default = {
+    "oracle_bgp_peering_subnet1"   = "10.0.219.48/30"
+    "oracle_bgp_peering_subnet2"   = "10.0.219.52/30"
     "oracle_bgp_peering_ip1"   = "10.0.219.49/30"
     "oracle_bgp_peering_ip2"   = "10.0.219.53/30"
     "customer_bgp_peering_ip1" = "10.0.219.50/30"
