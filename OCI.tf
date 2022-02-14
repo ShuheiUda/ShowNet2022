@@ -48,7 +48,7 @@ variable "oracle_virtual_circuit_parameter" {
     "customer_bgp_peering_ip2" = "10.0.219.54/30"
   }
 }
-
+/*
 #https://registry.terraform.io/providers/hashicorp/oci/latest/docs/resources/core_vcn
 resource "oci_core_vcn" "oracle_vcn" {
   display_name   = "vcn"
