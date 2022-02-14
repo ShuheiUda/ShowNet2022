@@ -112,7 +112,7 @@ resource "azurerm_express_route_circuit_peering" "expressroute_circuit_oci_peeri
   express_route_circuit_name    = azurerm_express_route_circuit.expressroute_circuit_oci.name
   resource_group_name           = azurerm_resource_group.resource_group_expressroute.name
   peer_asn                      = 31898
-  primary_peer_address_prefix   = oracle_virtual_circuit_parameter.oracle_bgp_peering_subnet1
-  secondary_peer_address_prefix = oracle_virtual_circuit_parameter.oracle_bgp_peering_subnet2
+  primary_peer_address_prefix   = lookup(var.oracle_virtual_circuit_parameter.oracle_bgp_peering_subnet1)
+  secondary_peer_address_prefix = lookup(var.oracle_virtual_circuit_parameter.oracle_bgp_peering_subnet2)
   vlan_id                       = 101
 }
